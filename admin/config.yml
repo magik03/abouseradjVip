@@ -1,35 +1,16 @@
 
-# إعدادات الاتصال بـ Netlify
 backend:
   name: git-gateway
   repo: magik03/abouseradjVip
-  branch: main # تأكد أن هذا هو اسم الفرع الرئيسي لديك
-
-# إعدادات الوسائط (الصور)
+  branch: main
 media_folder: "images"
-public_folder: "/images"
-
-# إعدادات صفحات الموقع
 collections:
   - name: "pages"
     label: "الصفحات"
     files:
-      - label: "الصفحة الرئيسية (صفحة الهبوط)"
+      - label: "الرئيسية"
         name: "index"
         file: "index.html"
         fields:
-          - {label: "عنوان الصفحة", name: "title", widget: "string"}
-          - {label: "الوصف الرئيسي", name: "description", widget: "text"}
-          - {label: "محتوى الصفحة", name: "body", widget: "markdown"}
-          - {label: "صورة الغلاف", name: "hero_image", widget: "image"}
-
-  - name: "settings"
-    label: "إعدادات عامة"
-    files:
-      - label: "معلومات التواصل"
-        name: "contact"
-        file: "contact.json"
-        fields:
-          - {label: "رقم الهاتف", name: "phone", widget: "string"}
-          - {label: "البريد الإلكتروني", name: "email", widget: "string"}
-          - {label: "رابط فيسبوك", name: "facebook", widget: "string"}
+          - {label: "العنوان", name: "title", widget: "string"}
+          - {label: "المحتوى", name: "body", widget: "markdown"}
