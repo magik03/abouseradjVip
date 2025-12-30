@@ -14,8 +14,7 @@ collections:
     create: true
     slug: "{{title}}"
     fields:
-      - {label: "العنوان", name: "title", widget: "string"}
+      - {label: "اسم التطبيق", name: "title", widget: "string"}
       - {label: "التصنيف", name: "category", widget: "select", options: ["أندرويد", "موقع ويب", "آيفون"]}
       - {label: "الرابط المباشر", name: "url", widget: "string"}
-      - {label: "وصف قصير", name: "body", widget: "text"}
-      - {label: "أيقونة (اختياري)", name: "image", widget: "image", required: false}
+      - {label: "الوصف", name: "body", widget: "text"}
