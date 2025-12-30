@@ -8,5 +8,36 @@
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </head>
 <body>
+  <script>
+    // إعدادات لوحة التحكم مباشرة داخل الكود لتجنب الشاشة البيضاء
+    CMS.init({
+      config: {
+        backend: {
+          name: 'github',
+          repo: 'magik03/abouseradjVip',
+          branch: 'main',
+        },
+        display_url: 'https://magik03.github.io/abouseradjVip/',
+        media_folder: 'images',
+        collections: [
+          {
+            name: 'pages',
+            label: 'الصفحات',
+            files: [
+              {
+                label: 'الصفحة الرئيسية',
+                name: 'index',
+                file: 'index.html',
+                fields: [
+                  { label: 'العنوان', name: 'title', widget: 'string' },
+                  { label: 'المحتوى', name: 'body', widget: 'markdown' }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    });
+  </script>
 </body>
 </html>
