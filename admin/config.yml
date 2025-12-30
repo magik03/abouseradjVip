@@ -1,20 +1,20 @@
 
+
 backend:
   name: github
-  repo: magik03/abouseradjVip
+  repo: magik03/abouseradjVip # تأكد أن هذا هو اسم مستودعك بالضبط
   branch: main
 
-media_folder: "images"
-public_folder: "/images"
+media_folder: "assets/images"
+public_folder: "/assets/images"
 
 collections:
-  - name: "links"
-    label: "الروابط والتطبيقات"
-    folder: "content/links"
-    create: true
-    slug: "{{title}}"
-    fields:
-      - {label: "اسم التطبيق", name: "title", widget: "string"}
-      - {label: "التصنيف", name: "category", widget: "select", options: ["أندرويد", "موقع ويب", "آيفون"]}
-      - {label: "الرابط المباشر", name: "url", widget: "string"}
-      - {label: "الوصف", name: "body", widget: "text"}
+  - name: "pages"
+    label: "الصفحات"
+    files:
+      - label: "الصفحة الرئيسية"
+        name: "home"
+        file: "index.html"
+        fields:
+          - {label: "العنوان", name: "title", widget: "string"}
+          - {label: "الوصف", name: "body", widget: "markdown"}
