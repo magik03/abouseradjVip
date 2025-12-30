@@ -1,16 +1,19 @@
 
 backend:
   name: github
-  repo: magik03/abouseradjVip # تأكد أن هذا اسم حسابك ومستودعك
-  branch: main
+  repo: magik03/abouseradjVip # تأكد أن هذا هو اسم المستخدم والمستودع لديك
+  branch: main # تأكد هل اسم الفرع عندك main أو master
 
-media_folder: "images" # مجلد الصور
+media_folder: "images" 
+public_folder: "/images"
 
 collections:
-  - name: "blog"
-    label: "المقالات"
-    folder: "_posts"
-    create: true
-    fields:
-      - {label: "العنوان", name: "title", widget: "string"}
-      - {label: "المحتوى", name: "body", widget: "markdown"}
+  - name: "pages"
+    label: "الصفحات"
+    files:
+      - label: "الصفحة الرئيسية"
+        name: "index"
+        file: "index.html"
+        fields:
+          - {label: "العنوان الرئيسي", name: "title", widget: "string"}
+          - {label: "محتوى الصفحة", name: "body", widget: "markdown"}
