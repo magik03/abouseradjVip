@@ -2,14 +2,16 @@
 backend:
   name: git-gateway
   repo: magik03/abouseradjVip
-  branch: main
+  branch: main # تأكد أن هذا هو اسم الفرع في صورتك 1000030885.jpg
+
 media_folder: "images"
+
 collections:
   - name: "pages"
     label: "الصفحات"
     files:
       - label: "الرئيسية"
-        name: "index"
+        name: "home"
         file: "index.html"
         fields:
           - {label: "العنوان", name: "title", widget: "string"}
