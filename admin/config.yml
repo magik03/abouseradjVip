@@ -1,19 +1,7 @@
 
 backend:
   name: github
-  repo: magik03/abouseradjVip # تأكد أن هذا هو اسم المستخدم والمستودع لديك
-  branch: main # تأكد هل اسم الفرع عندك main أو master
-
-media_folder: "images" 
-public_folder: "/images"
-
-collections:
-  - name: "pages"
-    label: "الصفحات"
-    files:
-      - label: "الصفحة الرئيسية"
-        name: "index"
-        file: "index.html"
-        fields:
-          - {label: "العنوان الرئيسي", name: "title", widget: "string"}
-          - {label: "محتوى الصفحة", name: "body", widget: "markdown"}
+  repo: magik03/abouseradjVip
+  branch: main
+  base_url: https://api.github.com # إضافة هذا السطر مهم جداً
+  auth_endpoint: /auth # هذا يحتاج لوسيط خارجي عادةً
