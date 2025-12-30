@@ -1,1 +1,21 @@
 
+backend:
+  name: github
+  repo: magik03/abouseradjVip
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "links"
+    label: "الروابط والتطبيقات"
+    folder: "content/links"
+    create: true
+    slug: "{{title}}"
+    fields:
+      - {label: "العنوان", name: "title", widget: "string"}
+      - {label: "التصنيف", name: "category", widget: "select", options: ["أندرويد", "موقع ويب", "آيفون"]}
+      - {label: "الرابط المباشر", name: "url", widget: "string"}
+      - {label: "وصف قصير", name: "body", widget: "text"}
+      - {label: "أيقونة (اختياري)", name: "image", widget: "image", required: false}
